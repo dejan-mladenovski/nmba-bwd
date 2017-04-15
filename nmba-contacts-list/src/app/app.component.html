@@ -1,3 +1,8 @@
-<h1>
-  {{title}}
-</h1>
+<!-- <md-toolbar color="primary">{{title}}</md-toolbar> -->
+<md-toolbar color="primary">
+  <div fxLayout fxLayoutAlign="space-between center" fxFlex>
+    Contacts
+    <a [routerLink]="['/about']" md-button title="Go to about page" class="right">About</a>
+  </div>
+</md-toolbar>
+<router-outlet></router-outlet>
