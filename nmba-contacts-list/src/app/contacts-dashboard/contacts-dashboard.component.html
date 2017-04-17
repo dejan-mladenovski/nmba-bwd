@@ -1,0 +1,11 @@
+<md-sidenav-container>
+  <md-sidenav mode="side" opened="true">
+    <nmba-contacts-list></nmba-contacts-list>
+  </md-sidenav>
+  <div class="main-content">
+    <router-outlet></router-outlet>
+  </div>
+</md-sidenav-container>
+<a routerLink="/contact/new" md-fab title="Add a new contact" class="trm-floating-button">
+  <md-icon class="md-24">add</md-icon>
+</a>

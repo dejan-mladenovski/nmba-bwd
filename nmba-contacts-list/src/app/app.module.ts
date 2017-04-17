@@ -10,11 +10,15 @@ import { APP_ROUTES } from './app.routes';
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
+import { ContactsDashboardComponent } from './contacts-dashboard/contacts-dashboard.component';
+import { ContactsListComponent } from './contacts-list/contacts-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AboutComponent
+    AboutComponent,
+    ContactsDashboardComponent,
+    ContactsListComponent
   ],
   imports: [
     BrowserModule,

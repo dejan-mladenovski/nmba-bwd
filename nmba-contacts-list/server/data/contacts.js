@@ -6,7 +6,7 @@ module.exports = [
         phone: '+49 000 1111',
         birthday: '1984-01-02',
         website: 'nmba.com',
-        image: '/assets/images/0.jpg',
+        image: '/assets/images/0.png',
         address: {
           street: 'nmba 1',
           zip: '65222',
@@ -20,8 +20,8 @@ module.exports = [
         email: 'john@doe.io',
         phone: '+49 000 222',
         birthday: '1991-03-31',
-        website: 'thoughtram.io',
-        image: '/assets/images/1.jpg',
+        website: 'nmba.com',
+        image: '/assets/images/1.png',
         address: {
           street: 'doe 1',
           zip: '65222',
