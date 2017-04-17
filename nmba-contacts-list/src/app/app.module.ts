@@ -6,11 +6,15 @@ import { RouterModule } from '@angular/router';
 import { MaterialModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
+import { APP_ROUTES } from './app.routes';
+
 import { AppComponent } from './app.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +22,7 @@ import { AppComponent } from './app.component';
     HttpModule,
     MaterialModule.forRoot(),
     FlexLayoutModule,
-    RouterModule.forRoot([])
+    RouterModule.forRoot(APP_ROUTES)
   ],
   providers: [],
   bootstrap: [AppComponent]
