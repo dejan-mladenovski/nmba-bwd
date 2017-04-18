@@ -1,3 +1,4 @@
+import { ContactService } from './../services/contact.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,15 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contacts-list.component.scss']
 })
 export class ContactsListComponent implements OnInit {
-  private contacts = [];
-  constructor() { }
+  contacts:any = [];
+  constructor(private contactService: ContactService) { }
 
   trackById(index: number, contact: any) {
     return contact.id;
   }
 
   ngOnInit() {
-    this.contacts = [];
+    this.contacts = this.contactService.getContacts();
   }
 
 }

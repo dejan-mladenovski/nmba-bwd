@@ -1,3 +1,6 @@
+import { ContactResolve } from './services/contact-resolver.service';
+import { ContactDetailsComponent } from './contact-details/contact-details.component';
+import { ContactService } from './services/contact.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -18,7 +21,8 @@ import { ContactsListComponent } from './contacts-list/contacts-list.component';
     AppComponent,
     AboutComponent,
     ContactsDashboardComponent,
-    ContactsListComponent
+    ContactsListComponent,
+    ContactDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +32,10 @@ import { ContactsListComponent } from './contacts-list/contacts-list.component';
     FlexLayoutModule,
     RouterModule.forRoot(APP_ROUTES)
   ],
-  providers: [],
+  providers: [
+    ContactService, 
+    ContactResolve
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
