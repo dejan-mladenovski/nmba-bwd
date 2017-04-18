@@ -5,20 +5,23 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ContactService } from './contact.service';
 
 import { APP_ROUTES } from './app.routes';
-
+import { ContactResolveService } from './contact-resolve.service';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { ContactsDashboardComponent } from './contacts-dashboard/contacts-dashboard.component';
 import { ContactsListComponent } from './contacts-list/contacts-list.component';
+import { ContactDetailsComponent } from './contact-details/contact-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
     ContactsDashboardComponent,
-    ContactsListComponent
+    ContactsListComponent,
+    ContactDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,7 @@ import { ContactsListComponent } from './contacts-list/contacts-list.component';
     FlexLayoutModule,
     RouterModule.forRoot(APP_ROUTES)
   ],
-  providers: [],
+  providers: [ContactService,ContactResolveService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
