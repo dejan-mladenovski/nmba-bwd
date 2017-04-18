@@ -13,6 +13,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactsDashboardComponent } from './contacts-dashboard/contacts-dashboard.component';
 import { ContactsListComponent } from './contacts-list/contacts-list.component';
 import { ContactsService } from './contacts.service';
+import {ContactResolve} from './contact-resolve.service';
 import { ContactDetailsComponent } from './contact-details/contact-details.component';
 
 @NgModule({
@@ -31,7 +32,7 @@ import { ContactDetailsComponent } from './contact-details/contact-details.compo
     FlexLayoutModule,
     RouterModule.forRoot(APP_ROUTES)
   ],
-  providers: [ContactsService],
+  providers: [ContactsService, ContactResolve],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
