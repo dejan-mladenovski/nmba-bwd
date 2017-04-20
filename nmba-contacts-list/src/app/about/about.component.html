@@ -1,3 +1,40 @@
-<p>
-  about works!
-</p>
+<form #myForm="ngForm">
+  <input required minlength="3" #firstname="ngModel" [(ngModel)]="contact.name" name="name"  />
+  <span class="text-danger" *ngIf="firstname.errors?.required">Woops! This field is required</span>
+  <span class="text-danger" *ngIf="firstname.errors?.minlength">Woops! You entered {{firstname.errors.minlength.actualLength}} but you need {{firstname.errors.minlength.requiredLength}}</span>
+
+  <br />
+  <input [(ngModel)]="contact.surname" name="surname"  /> <br />
+  My variable is: {{contact.name}} {{contact.surname}}
+  <button [disabled]="myForm.invalid">Save</button><br /><br />
+
+
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+.text-danger {
+  color: red;
+}
+</style>
